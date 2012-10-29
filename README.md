@@ -14,19 +14,27 @@ jira cli 2.6.0
 Installation
 ============
 1. If $HOME/.hgrc doesn't exist, you need to create this file.  You then need to add the following line your $HOME/.hgrc
-Trigger by commits
-.hgrc
-<code>
-[hooks]
-commit = ~/.hg/jira-commit.sh 
-</code>
-or
-Trigger by push/pull/unbundle
-.hgrc:
-<code>
-[hooks]
-changegroup = ~/.hg/jira-commit.sh 
-</code>
+<div>
+  <div>
+    <div>Trigger by commits.</div>
+    <div>.hgrc:
+      <code>
+      [hooks]
+      commit = ~/.hg/jira-commit.sh 
+      </code>
+    </div>
+    <div>or</div>
+  </div>
+  <div>
+    <div>Trigger by push/pull/unbundle</div>
+    <div>.hgrc: 
+      <code>
+      [hooks]
+      changegroup = ~/.hg/jira-commit.sh 
+      </code>
+    </div>
+  </div>
+</div>
 Please read http://mercurial.selenic.com/wiki/Hook on how to configure this to fit your need.
 
 2. Create a jira-setting file in $HOME/.hg/jira-setting
