@@ -43,7 +43,7 @@ Please read http://mercurial.selenic.com/wiki/Hook on how to configure this to f
   # No space
   JIRA_HOST=(your mercurial host include port if necessary)
   JIRA_USERNAME=(your username)
-  JIRA_PASSWORD=(your password)
+  JIRA_PASSWORD=(your password)|`(keychain script to retrieve your password)`
   </pre>
 </div>
 
