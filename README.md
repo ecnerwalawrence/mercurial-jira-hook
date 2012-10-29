@@ -15,25 +15,28 @@ Installation
 ============
 1. If $HOME/.hgrc doesn't exist, you need to create this file.  You then need to add the following line your $HOME/.hgrc
 Trigger by commits
-<.hgrc>
+.hgrc
+<code>
 [hooks]
 commit = ~/.hg/jira-commit.sh 
-</.hgrc>
+</code>
 or
 Trigger by push/pull/unbundle
-<.hgrc>
+.hgrc:
+<code>
 [hooks]
 changegroup = ~/.hg/jira-commit.sh 
-</.hgrc>
+</code>
 Please read http://mercurial.selenic.com/wiki/Hook on how to configure this to fit your need.
 
 2. Create a jira-setting file in $HOME/.hg/jira-setting
-<jira-settings>
+jira-settings:
+<code>
 # No space
 JIRA_HOST=(your mercurial host include port if necessary)
 JIRA_USERNAME=(your username)
 JIRA_PASSWORD=(your password)
-</jira-settings>
+</code>
 
 TODO
 ====
