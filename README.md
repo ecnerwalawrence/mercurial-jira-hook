@@ -1,9 +1,9 @@
 mercurial-jira-hook
 ===================
 
-This Mercurial hook updates a Jira bug with mercurial commits.  It utilizes Jira CLI and is triggered by Mercurial commits. 
+This Mercurial hook updates a Jira issue with your mercurial commits' comment.  It utilizes Jira CLI and is triggered by Mercurial commits. 
 
-I wrote this hook so my mercurial commits would appear in a bug by putting my bug number into the comments.
+I wrote this hook so my mercurial commits would appear in a bug by putting my bug number into the comments.  The hook will log the bug into the Jira comment field, if comment has "BUG:#JIRA_ISSUE".
 
 Dependencies
 ============
@@ -14,10 +14,18 @@ jira cli 2.6.0
 Installation
 ============
 1. If $HOME/.hgrc doesn't exist, you need to create this file.  You then need to add the following line your $HOME/.hgrc
+Trigger by commits
 <.hgrc>
 [hooks]
 commit = ~/.hg/jira-commit.sh 
 </.hgrc>
+or
+Trigger by push/pull/unbundle
+<.hgrc>
+[hooks]
+changegroup = ~/.hg/jira-commit.sh 
+</.hgrc>
+Please read http://mercurial.selenic.com/wiki/Hook on how to configure this to fit your need.
 
 2. Create a jira-setting file in $HOME/.hg/jira-setting
 <jira-settings>
