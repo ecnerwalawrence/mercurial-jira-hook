@@ -18,20 +18,20 @@ Installation
   <div>
     <div>Trigger by commits.</div>
     <div>.hgrc:
-      <code>
+      <pre>
       [hooks]
       commit = ~/.hg/jira-commit.sh 
-      </code>
+      </pre>
     </div>
     <div>or</div>
   </div>
   <div>
     <div>Trigger by push/pull/unbundle</div>
     <div>.hgrc: 
-      <code>
+      <pre>
       [hooks]
       changegroup = ~/.hg/jira-commit.sh 
-      </code>
+      </pre>
     </div>
   </div>
 </div>
