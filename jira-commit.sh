@@ -25,7 +25,7 @@ is_installed jira.sh
 source $HOME/.hg/jira-settings
 SUBJECT="$HG_NODE"
 COMMENTS=`hg log -r $HG_NODE`
-JIRA_ISSUE=`hg log -r $HG_NODE | grep -i 'summary: ' | awk -F ' ' '{ c=1; while(c < 5) { if(match(tolower($c),"BUG:")){print $c;} c++;}}' | awk -F ':' '{print $2}' `
+JIRA_ISSUE=`hg log -r $HG_NODE | grep -i 'summary: ' | awk -F ' ' '{ c=1; while(c < 5) { if(match(tolower($c),"bug:")){print $c;} c++;}}' | awk -F ':' '{print $2}' `
 if [ -z "$JIRA_ISSUE" ]; then
     echo "WARNING:No bug in comment '$JIRA_ISSUE'"
     exit
