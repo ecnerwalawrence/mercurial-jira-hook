@@ -47,6 +47,8 @@ Please read http://mercurial.selenic.com/wiki/Hook on how to configure this to f
   </pre>
 </div>
 
+3. Copy jira-commit.sh to ~/.hg/
+
 TODO
 ----
 Eventually, I will write a installation script that uses ruby brew or something to automate all these steps.
